@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class DatabaseQuery {
     public static void main(String[] args) {
         // Configuración de la base de datos
-        String url = "jdbc:mysql://localhost:3307/mibase1"; // Cambia el nombre de la base de datos si es necesario
+        String url = "jdbc:mysql://localhost:3306/mibase1"; // Cambia el nombre de la base de datos si es necesario
         String user = "root";
         String password = "Canada";
 
@@ -22,11 +22,11 @@ public class DatabaseQuery {
                 int idd = rs.getInt("idd");
                 String tipo = rs.getString("tipo");
                 int cantidad = rs.getInt("cantidad");
-                System.out.println("ID: " + idd + ", Tipo: " + tipo + ", Cantidad: " + cantidad);
+                String t_cambio = rs.getString("tipo_cambio");
+                System.out.println("ID: " + idd + ", Tipo: " + tipo + ", Cantidad: " + cantidad + ", Tipo cambio: " + t_cambio);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
-
