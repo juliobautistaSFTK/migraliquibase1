@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class DatabaseQuery {
     public static void main(String[] args) {
         // Configuración de la base de datos
-        String url = "jdbc:mysql://localhost:3306/mibase1"; // Cambia el nombre de la base de datos si es necesario
+        String url = "jdbc:mysql://localhost:3307/mibase1"; // Cambia el nombre de la base de datos si es necesario
         String user = "root";
         String password = "Canada";
 
