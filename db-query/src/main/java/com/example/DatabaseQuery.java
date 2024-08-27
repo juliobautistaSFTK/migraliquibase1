@@ -1,5 +1,3 @@
-package com.example;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -18,6 +16,7 @@ public class DatabaseQuery {
             String query = "SELECT * FROM medidas2"; // Consulta SQL
             ResultSet rs = stmt.executeQuery(query);
 
+                System.out.println("Versión 1.0");
             while (rs.next()) {
                 int idd = rs.getInt("idd");
                 String tipo = rs.getString("tipo");
@@ -29,4 +28,3 @@ public class DatabaseQuery {
         }
     }
 }
-
