@@ -7,18 +7,16 @@ import java.sql.Statement;
 
 public class DatabaseQuery {
     public static void main(String[] args) {
-        // Leer la variable de entorno para el puerto de la base de datos
-        String port = System.getenv("DB_PORT");
-        String port2 = System.getenv("JENKINS_HOME");
-        System.out.println("Puerto: " + port + "JENKINS_HOME: " + port2);
-        if (port == null) {
-            port = "3306"; // Puerto por defecto si la variable no está definida
+        String dbPort = "3306"; // Valor predeterminado
+        if (args.length > 0) {
+            dbPort = args[0];
         }
-        System.out.println("Puerto: " + port);
+     
         // Configuración de la base de datos
-        String url = "jdbc:mysql://localhost:" + port + "/mibase1"; // Usa el puerto dinámico
+        String url = "jdbc:mysql://localhost:" + dbPort + "/mibase1"; // Usa el puerto proporcionado
         String user = "root";
         String password = "Canada";
+        System.out.println("Puerto: " + dbPort);
 
         // Conexión y consulta a la base de datos
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
