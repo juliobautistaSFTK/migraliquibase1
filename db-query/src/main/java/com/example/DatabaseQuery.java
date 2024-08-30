@@ -9,7 +9,8 @@ public class DatabaseQuery {
     public static void main(String[] args) {
         // Leer la variable de entorno para el puerto de la base de datos
         String port = System.getenv("DB_PORT");
-        System.out.println("Puerto: " + port);
+        String port2 = System.getenv("TERM");
+        System.out.println("Puerto: " + port + "TERM: " + port2);
         if (port == null) {
             port = "3306"; // Puerto por defecto si la variable no está definida
         }
