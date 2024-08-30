@@ -13,7 +13,7 @@ public class DatabaseQuery {
         if (port == null) {
             port = "3306"; // Puerto por defecto si la variable no está definida
         }
-
+        System.out.println("Puerto: " + port);
         // Configuración de la base de datos
         String url = "jdbc:mysql://localhost:" + port + "/mibase1"; // Usa el puerto dinámico
         String user = "root";
