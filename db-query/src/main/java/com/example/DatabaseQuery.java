@@ -24,12 +24,13 @@ public class DatabaseQuery {
             String query = "SELECT * FROM medidas2"; // Consulta SQL
             ResultSet rs = stmt.executeQuery(query);
 
-            System.out.println("Versión 1.0");
+            System.out.println("Versión 1.1");
             while (rs.next()) {
                 int idd = rs.getInt("idd");
                 String tipo = rs.getString("tipo");
                 int cantidad = rs.getInt("cantidad");
-                System.out.println("ID: " + idd + ", Tipo: " + tipo + ", Cantidad: " + cantidad);
+                String t_cambio = rs.getString("tipo_cambio");
+                System.out.println("ID: " + idd + ", Tipo: " + tipo + ", Cantidad: " + cantidad + ", Tipo cambio: " + t_cambio);
             }
         } catch (Exception e) {
             e.printStackTrace();
