@@ -31,8 +31,8 @@ public class DatabaseQuery {
                 int idd = rs.getInt("idd");
                 String tipo = rs.getString("tipo");
                 int cantidad = rs.getInt("cantidad");
-                String t_cambio = rs.getString("tipo_cambio");
-                System.out.println("ID: " + idd + ", Tipo: " + tipo + ", Cantidad: " + cantidad + ", Tipo cambio: " + t_cambio);
+                //String t_cambio = rs.getString("tipo_cambio");
+                System.out.println("ID: " + idd + ", Tipo: " + tipo + ", Cantidad: " + cantidad + ");
             }
         } catch (Exception e) {
             e.printStackTrace();
