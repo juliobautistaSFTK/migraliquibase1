@@ -13,7 +13,9 @@ public class DatabaseQuery {
         }
      
         // Configuración de la base de datos
+
         String url = "jdbc:mysql://localhost:" + dbPort + "/mibase1"; // Usa el puerto proporcionado
+
         String user = "root";
         String password = "Canada";
         System.out.println("Puerto: " + dbPort);
