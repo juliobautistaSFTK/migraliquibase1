@@ -46,6 +46,8 @@ public class DatabaseQuery {
 
                 System.out.println("Nombre: " + nombrev + ", Población: " + poblacionv);
             }
+            System.out.println("=========================================================");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
