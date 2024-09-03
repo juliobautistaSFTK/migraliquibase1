@@ -23,7 +23,7 @@ public class DatabaseQuery {
             String query = "SELECT * FROM medidas2"; // Consulta SQL
             ResultSet rs = stmt.executeQuery(query);
 
-            System.out.println("Versión 1.1");
+            System.out.println("Versión 1.2");
             while (rs.next()) {
                 int idd = rs.getInt("idd");
                 String tipo = rs.getString("tipo");
