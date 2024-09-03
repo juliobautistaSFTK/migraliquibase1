@@ -34,5 +34,20 @@ public class DatabaseQuery {
         } catch (Exception e) {
             e.printStackTrace();
         }
+         try (Connection conn = DriverManager.getConnection(url, user, password)) {
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM estados2"; // Consulta SQL
+            ResultSet rs = stmt.executeQuery(query);
+
+            System.out.println("Versión 1.2");
+            while (rs.next()) {
+                String nombrev = rs.getString("nombre");
+                int poblacionv = rs.getInt("poblacion");
+
+                System.out.println("Nombre: " + nombrev + ", Población: " + poblacionv);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
