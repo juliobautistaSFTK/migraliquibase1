@@ -38,7 +38,7 @@
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <version>${liquibase.version}</version>
 		<configuration>
-                  <changeLogFile>lq_medidas_create.xml</changeLogFile>
+                  <changeLogFile>lq_medidas_update2.xml</changeLogFile>
                      <url>jdbc:mysql://localhost:3306/mibase1</url>
                      <username>root</username>
                       <password>Canada</password>
