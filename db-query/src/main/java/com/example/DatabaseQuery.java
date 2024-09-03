@@ -23,7 +23,7 @@ public class DatabaseQuery {
             String query = "SELECT * FROM medidas2"; // Consulta SQL
             ResultSet rs = stmt.executeQuery(query);
 
-            System.out.println("Versión 1.2");
+            System.out.println("Versión 2.0");
             while (rs.next()) {
                 int idd = rs.getInt("idd");
                 String tipo = rs.getString("tipo");
@@ -39,7 +39,7 @@ public class DatabaseQuery {
             String query = "SELECT * FROM estados2"; // Consulta SQL
             ResultSet rs = stmt.executeQuery(query);
 
-            System.out.println("Versión 1.2");
+            System.out.println("=========================================================");
             while (rs.next()) {
                 String nombrev = rs.getString("nombre");
                 int poblacionv = rs.getInt("poblacion");
