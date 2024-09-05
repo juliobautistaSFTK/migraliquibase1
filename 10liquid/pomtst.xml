@@ -39,7 +39,7 @@
                 <version>${liquibase.version}</version>
 		<configuration>
                   <changeLogFile>lq_estados_create.xml</changeLogFile>
-                     <url>jdbc:mysql://localhost:3306/mibase1</url>
+                     <url>jdbc:mysql://localhost:3307/mibase1</url>
                      <username>root</username>
                       <password>Canada</password>
                 </configuration>
@@ -54,4 +54,3 @@
         </plugins>
     </build>
 </project>
-

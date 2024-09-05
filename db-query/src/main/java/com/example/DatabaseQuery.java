@@ -23,7 +23,7 @@ public class DatabaseQuery {
             String query = "SELECT * FROM medidas2"; // Consulta SQL
             ResultSet rs = stmt.executeQuery(query);
 
-            System.out.println("Versión 1.2");
+            System.out.println("Versión 2.0");
             while (rs.next()) {
                 int idd = rs.getInt("idd");
                 String tipo = rs.getString("tipo");
@@ -31,6 +31,23 @@ public class DatabaseQuery {
                 String t_cambio = rs.getString("tipo_cambio");
                 System.out.println("ID: " + idd + ", Tipo: " + tipo + ", Cantidad: " + cantidad + ", Tipo cambio: " + t_cambio);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+         try (Connection conn = DriverManager.getConnection(url, user, password)) {
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM estados2"; // Consulta SQL
+            ResultSet rs = stmt.executeQuery(query);
+
+            System.out.println("=========================================================");
+            while (rs.next()) {
+                String nombrev = rs.getString("nombre");
+                int poblacionv = rs.getInt("poblacion");
+
+                System.out.println("Nombre: " + nombrev + ", Población: " + poblacionv);
+            }
+            System.out.println("=========================================================");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
