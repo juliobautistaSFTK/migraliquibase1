@@ -8,40 +8,42 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <liquibase.version>4.27.0</liquibase.version> <!-- Asegúrate de usar la versión adecuada -->
+        <liquibase.version>4.27.0</liquibase.version>
+        <db.username>root</db.username>
+        <db.password>Canada</db.password>
     </properties>
+
     <repositories>
-       <repository>
-          <id>central</id>
-          <url>https://repo.maven.apache.org/maven2</url>
-       </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
     </repositories>
 
     <dependencies>
-	            <!-- Dependencias de Liquibase -->
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
             <version>${liquibase.version}</version>
         </dependency>
-	<dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.27</version>
         </dependency>
     </dependencies>
 
-       <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <version>${liquibase.version}</version>
-		<configuration>
-                  <changeLogFile>lq_medidas_create.xml</changeLogFile>
-                     <url>jdbc:mysql://localhost:3306/mibase1</url>
-                     <username>root</username>
-                      <password>Canada</password>
+                <configuration>
+                    <changeLogFile>lq_medidas_create.xml</changeLogFile>
+                    <url>jdbc:mysql://localhost:${db.port}/mibase1</url>
+                    <username>${db.username}</username>
+                    <password>${db.password}</password>
                 </configuration>
                 <executions>
                     <execution>
@@ -53,5 +55,26 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <db.port>3306</db.port>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <db.port>3307</db.port>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <db.port>3308</db.port>
+            </properties>
+        </profile>
+    </profiles>
 </project>
 
