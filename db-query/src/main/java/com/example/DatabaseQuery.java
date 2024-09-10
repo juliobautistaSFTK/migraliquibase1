@@ -43,8 +43,9 @@ public class DatabaseQuery {
             while (rs.next()) {
                 String nombrev = rs.getString("nombre");
                 int poblacionv = rs.getInt("poblacion");
+                int superficiev = rs.getInt("superficie");
 
-                System.out.println("Nombre: " + nombrev + ", Población: " + poblacionv);
+                System.out.println("Nombre: " + nombrev + ", Población: " + poblacionv + ", Superficie: " + superficiev );
             }
             System.out.println("=========================================================");
 
