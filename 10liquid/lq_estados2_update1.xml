@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <!-- Cambio para agregar un nuevo campo a la tabla -->
+    <changeSet id="add-column-superficie-to-estados" author="usuario">
+        <addColumn tableName="estados2">
+            <column name="superficie" type="INT">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+        <!-- Rollback para eliminar la columna agregada -->
+       <rollback>
+           <dropColumn tableName="estados2" columnName="superficie"/>
+       </rollback>
+    </changeSet>
+
+</databaseChangeLog>
