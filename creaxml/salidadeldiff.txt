@@ -1,0 +1,3 @@
+Changes in Database 1 but not in Database 2:
+3	lq_medidas_update2.xml
+4	lq_estados_create.xml
