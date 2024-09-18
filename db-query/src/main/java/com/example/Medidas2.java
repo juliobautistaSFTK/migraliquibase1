@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "medidas2", schema = "mibase1") // Asegúrate de que el esquema y la tabla coincidan con tu base de datos
@@ -17,7 +18,7 @@ public class Medidas2 {
     private int tipo;
 
     @Column(name = "cantidad")
-    private Short cantidad;
+    private BigDecimal cantidad;
 
     @Column(name = "tipo_cambio", length = 255)
     private String tipoCambio;
