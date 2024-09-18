@@ -1,4 +1,4 @@
-package com.example;
+package com.example.modelo;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
