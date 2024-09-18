@@ -17,7 +17,7 @@ public class Medidas2 {
     private int tipo;
 
     @Column(name = "cantidad")
-    private int cantidad;
+    private Short cantidad;
 
     @Column(name = "tipo_cambio", length = 255)
     private String tipoCambio;
