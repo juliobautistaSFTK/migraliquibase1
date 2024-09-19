@@ -10,7 +10,7 @@ public class Main {
 
         try {
             transaction = session.beginTransaction();
-            Medidas2 medida = new Medidas2();
+            medidas2 medida = new medidas2();
             medida.setIdd(1);
             medida.setTipo(1);
             medida.setCantidad((short) 10);
