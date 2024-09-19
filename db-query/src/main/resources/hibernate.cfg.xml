@@ -16,6 +16,6 @@
         <property name="hibernate.format_sql">true</property>
 
         <!-- Mapeo de entidades -->
-        <mapping class="com.example.Medidas2.java"/>
+        <mapping class="com.example.Medidas2"/>
     </session-factory>
 </hibernate-configuration>
