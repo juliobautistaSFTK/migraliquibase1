@@ -22,9 +22,6 @@ public class Medidas2 {
     @Column(name = "tipo_cambio", length = 255)
     private String tipoCambio;
 
-    @Column(name = "comentarios", length = 255)
-    private String comentarios;
-
     // Getters and Setters
     public int getIdd() {
         return idd;
@@ -56,10 +53,6 @@ public class Medidas2 {
 
     public void setTipoCambio(String tipoCambio) {
         this.tipoCambio = tipoCambio;
-    }
-
-    public void setcomentarios(String comentarios) {
-        this.comentarios = comentarios;
     }
 
     @Override
