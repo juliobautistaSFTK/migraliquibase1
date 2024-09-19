@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "medidas2", schema = "mibase1") // Asegúrate de que el esquema y la tabla coincidan con tu base de datos
-public class Medidas2 {
+public class medidas2 {
 
     @Id
     @Column(name = "idd")
@@ -57,7 +57,7 @@ public class Medidas2 {
 
     @Override
     public String toString() {
-        return "Medidas2{" +
+        return "medidas2{" +
                 "idd=" + idd +
                 ", tipo=" + tipo +
                 ", cantidad=" + cantidad +
