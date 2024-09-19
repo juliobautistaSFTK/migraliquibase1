@@ -6,8 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Medidas2", schema = "mibase1") // Asegúrate de que el esquema y la tabla coincidan con tu base de datos
-public class medidas2 {
+@Table(name = "medidas2", schema = "mibase1") // Asegúrate de que el esquema y la tabla coincidan con tu base de datos
+public class Medidas2 {
 
     @Id
     @Column(name = "idd")
