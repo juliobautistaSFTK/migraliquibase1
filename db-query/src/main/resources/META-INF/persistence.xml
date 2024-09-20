@@ -1,5 +1,5 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1"> 
-    <persistence-unit name="examplePU"> 
+    <persistence-unit name="example"> 
         <class>com.example.Medidas2</class> 
         <!-- Configuración de la base de datos --> 
         <properties> 
